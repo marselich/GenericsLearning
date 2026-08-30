@@ -2,9 +2,10 @@ public class Elf : Enemy
 {
     private float _rangeDamage;
 
-    public override void Initialize(EnemySettings enemySettings)
+    public void Initialize(EnemySettings enemySettings)
     {
-        base.Initialize(enemySettings);
+        Health = enemySettings.Health;
+        Speed = enemySettings.Speed;
 
         if (enemySettings is ElfSettings elfSettings)
             _rangeDamage = elfSettings.RangeDamage;

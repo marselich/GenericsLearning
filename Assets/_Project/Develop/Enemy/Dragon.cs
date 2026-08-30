@@ -2,9 +2,10 @@ public class Dragon : Enemy
 {
     private float _fireDamage;
 
-    public override void Initialize(EnemySettings enemySettings)
+    public void Initialize(EnemySettings enemySettings)
     {
-        base.Initialize(enemySettings);
+        Health = enemySettings.Health;
+        Speed = enemySettings.Speed;
 
         if (enemySettings is DragonSettings dragonSettings)
             _fireDamage = dragonSettings.FireDamage;

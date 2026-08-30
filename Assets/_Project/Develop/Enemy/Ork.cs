@@ -2,9 +2,10 @@ public class Ork : Enemy
 {
     private float _meleeDamage;
 
-    public override void Initialize(EnemySettings enemySettings)
+    public void Initialize(EnemySettings enemySettings)
     {
-        base.Initialize(enemySettings);
+        Health = enemySettings.Health;
+        Speed = enemySettings.Speed;
 
         if (enemySettings is OrkSettings orkSettings)
             _meleeDamage = orkSettings.MeleeDamage;

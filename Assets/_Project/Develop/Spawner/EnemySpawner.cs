@@ -1,24 +1,44 @@
+using System;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class EnemySpawner
 {
-    private const float PositionY = 1;
+    private Dragon _dragonPrefab;
+    private Elf _elfPrefab;
+    private Ork orkPrefab;
 
-    private float _positionRadius;
-
-    public EnemySpawner(float radiusPosition)
+    public EnemySpawner(Dragon dragonPrefab, Elf elfPrefab, Ork orkPrefab)
     {
-        _positionRadius = radiusPosition;
+        _dragonPrefab = dragonPrefab;
+        _elfPrefab = elfPrefab;
+        this.orkPrefab = orkPrefab;
     }
 
-    public Enemy Spawn(EnemySettings enemySettings)
+    public Enemy Spawn(EnemySettings enemySettings, Vector3 position)
     {
-        Enemy enemy = Object.Instantiate(enemySettings.EnemyPrefab, GetRandomPosition(), Quaternion.identity);
-        enemy.Initialize(enemySettings);
+        switch (enemySettings)
+        {
+            case DragonSettings dragonSettings:
+                Dragon dragon = Object.Instantiate(_dragonPrefab, position, Quaternion.identity) as Dragon;
+                dragon.Initialize(dragonSettings);
 
-        return enemy;
+                return dragon;
+
+            case ElfSettings elfSettings:
+                Elf elf = Object.Instantiate(_elfPrefab, position, Quaternion.identity) as Elf;
+                elf.Initialize(elfSettings);
+
+                return elf;
+
+            case OrkSettings orkSettings:
+                Ork ork = Object.Instantiate(orkPrefab, position, Quaternion.identity) as Ork;
+                ork.Initialize(orkSettings);
+
+                return ork;
+
+            default:
+                throw new Exception("enemySettings not found");
+        }
     }
-
-    private Vector3 GetRandomPosition() =>
-        new Vector3(Random.Range(-_positionRadius, _positionRadius), PositionY, Random.Range(-_positionRadius, _positionRadius));
 }

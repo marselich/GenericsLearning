@@ -443,43 +443,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2c7fc10ac65e24998252f43ee31153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dragonPrefab: {fileID: 4796267634954153871, guid: eadefacabe6cb6049a8e77bcad2ab65b, type: 3}
+  _elfPrefab: {fileID: 6588889605226561433, guid: b7e5265141303c14dbf2a14edb661a6c, type: 3}
+  _orkPrefab: {fileID: 5081554915892058856, guid: 7749d7ea6b95bab4995a154c2ebbec3d, type: 3}
   _dragonSettings:
-  - <EnemyPrefab>k__BackingField: {fileID: 4796267634954153871, guid: eadefacabe6cb6049a8e77bcad2ab65b, type: 3}
-    <Health>k__BackingField: 1000
+  - <Health>k__BackingField: 1000
     <Speed>k__BackingField: 20
     <FireDamage>k__BackingField: 100
-  - <EnemyPrefab>k__BackingField: {fileID: 4796267634954153871, guid: eadefacabe6cb6049a8e77bcad2ab65b, type: 3}
-    <Health>k__BackingField: 700
+  - <Health>k__BackingField: 700
     <Speed>k__BackingField: 39
     <FireDamage>k__BackingField: 234
-  - <EnemyPrefab>k__BackingField: {fileID: 4796267634954153871, guid: eadefacabe6cb6049a8e77bcad2ab65b, type: 3}
-    <Health>k__BackingField: 500
+  - <Health>k__BackingField: 500
     <Speed>k__BackingField: 45
     <FireDamage>k__BackingField: 400
   _elfSettings:
-  - <EnemyPrefab>k__BackingField: {fileID: 6588889605226561433, guid: b7e5265141303c14dbf2a14edb661a6c, type: 3}
-    <Health>k__BackingField: 200
+  - <Health>k__BackingField: 200
     <Speed>k__BackingField: 10
     <RangeDamage>k__BackingField: 40
-  - <EnemyPrefab>k__BackingField: {fileID: 6588889605226561433, guid: b7e5265141303c14dbf2a14edb661a6c, type: 3}
-    <Health>k__BackingField: 154
+  - <Health>k__BackingField: 154
     <Speed>k__BackingField: 23
     <RangeDamage>k__BackingField: 54
-  - <EnemyPrefab>k__BackingField: {fileID: 6588889605226561433, guid: b7e5265141303c14dbf2a14edb661a6c, type: 3}
-    <Health>k__BackingField: 123
+  - <Health>k__BackingField: 123
     <Speed>k__BackingField: 32
     <RangeDamage>k__BackingField: 30
   _orkSettings:
-  - <EnemyPrefab>k__BackingField: {fileID: 5081554915892058856, guid: 7749d7ea6b95bab4995a154c2ebbec3d, type: 3}
-    <Health>k__BackingField: 300
+  - <Health>k__BackingField: 300
     <Speed>k__BackingField: 5
     <MeleeDamage>k__BackingField: 40
-  - <EnemyPrefab>k__BackingField: {fileID: 5081554915892058856, guid: 7749d7ea6b95bab4995a154c2ebbec3d, type: 3}
-    <Health>k__BackingField: 250
+  - <Health>k__BackingField: 250
     <Speed>k__BackingField: 7
     <MeleeDamage>k__BackingField: 50
-  - <EnemyPrefab>k__BackingField: {fileID: 5081554915892058856, guid: 7749d7ea6b95bab4995a154c2ebbec3d, type: 3}
-    <Health>k__BackingField: 345
+  - <Health>k__BackingField: 345
     <Speed>k__BackingField: 4
     <MeleeDamage>k__BackingField: 70
 --- !u!4 &1763158692
